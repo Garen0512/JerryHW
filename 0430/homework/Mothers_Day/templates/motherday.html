@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mother Day</title>
+	<body background="https://sallme123.files.wordpress.com/2012/06/e585a7e9a081ps.jpg"
+	      style="background-attachment: fixed";
+	      style="background-position: right bottom";
+	      style="background-repeat: no-repeat";></body>
+</head>
+<body>
+	<h1>母親節留言</h1>
+	<img src="https://www.pairs.tw/wp-content/uploads/2016/04/happymothersday.png">
+	<form action="" method="post">
+		{% csrf_token %}
+		<textarea name="comment"></textarea>
+		<input type="submit" value="新增">
+	</form><hr>
+	<h4>Comment:</h4><br>
+	<h1>{{ comment }}</h1>
+</body>
+</html>

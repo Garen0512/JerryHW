@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Blog</title>
+	<body background="https://4.share.photo.xuite.net/one6708/144e8bd/3987971/153323450_x.jpg"
+	      style="background-attachment: fixed";
+	      style="background-position: right bottom";
+	      style="background-repeat: no-repeat";></body>
+</head>
+<body>
+	<h1>Blog</h1>
+	<div align="left"><a href="/blog/homepage_1"><button>新增</button></a></div><hr>
+	{% for post in post_list %}
+		<div align="left">
+			<a href="/blog/homepage_2?q={{ post.pk }}"><button>編輯</button></a>
+			<form action="" method="post">
+				{% csrf_token %}
+				<input type="hidden" name="pk" value="{{ post.pk }}">
+				<input type="submit" value="刪除">
+			</form>
+		</div>
+		<h4>Title:</h4>{{ post.text }}
+		<h4>Comment:</h4>{{ post.comment }}<hr>
+	{% endfor %}
+</body>
+</html>
