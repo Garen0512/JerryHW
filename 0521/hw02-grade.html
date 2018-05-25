@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html><head>
+<title>成績判斷</title>
+<script>
+    function a() {
+	    grade = document.getElementById("grade").value;
+        result="";
+        if(grade>=60 && grade<=100){
+            result="合格"
+        }else if(grade<60 && grade>=0){
+            result="不及格,請加油"
+        }
+        else{
+            result="請輸入1-100"
+        }
+        document.getElementById("a").innerHTML =result;
+    }
+</script></head>
+
+    
+  
+    
+<body>
+<h1>成績判斷</h1>
+
+
+<form method="post" action="test03_01_show.php">
+<table border="1">
+<tbody><tr>
+<td>請輸入成績</td>
+<td><input type="text" size="15" id="grade"></td>
+</tr>
+<tr>   
+<td colspan="2"><button type="button" onclick="a()">成績判斷</button></td>
+</tr>
+
+</tbody></table>
+</form>
+<p>結果：</p>
+<p id="a"></p>
+
+
+
+</body></html>
